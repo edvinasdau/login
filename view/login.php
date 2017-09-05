@@ -18,7 +18,7 @@
 					<form method="POST">
 						  <div class="form-group">
 							    <label for="username">Username</label>
-							    <input name="username" type="text" class="form-control" id="Username">
+							    <input name="username" type="text" class="form-control" id="Username" value="<?$old_user?>">
 							  </div>
 
 							  <div class="form-group">

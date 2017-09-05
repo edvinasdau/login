@@ -1,7 +1,7 @@
 <?php
 
 //$vardas = "";
-
+$old_user = "";
 #COOKIES
 
 //setcookie("username", "gigigkltr", time() + (86400 * 30), "/");
