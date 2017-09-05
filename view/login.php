@@ -1,32 +1,50 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login page</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<meta charset="utf-8">
+</head>
+<body>
+	<div class="container">
+		<h1>Login form</h1>
+			<div class="row">
+				<div class="col-4">
+					<?php
+					if (isset($error)){
+						echo '<div class="alert alert-danger">' .$error. '</div>';
+					}
+					?>
+					<form method="POST">
+						  <div class="form-group">
+							    <label for="username">Username</label>
+							    <input name="username" type="text" class="form-control" id="Username">
+							  </div>
 
-$vardas = "";
+							  <div class="form-group">
+							    <label for="exampleInputPassword1">Password</label>
+							    <input name="password" type="password" class="form-control" id="Password">
+							  </div>
 
-#COOKIES
+							  <button name="submit" type="submit" class="btn btn-primary">Login</button>
+					</form>
+				</div>
 
-//setcookie("username", "gigigkltr", time() + (86400 * 30), "/");
-/*
-if(isset($_COOKIE["username"])){
-    $vardas = $_COOKIE["username"];
-} else {
-    $vardas = "nezinomas";
-}
-*/
+				<div class="col">
+					<pre><?php
+					echo "POST:";
+					print_r($_POST);
 
+					echo "SESSION:";
+					print_r($_SESSION);
 
-#SESSIONS
+					echo "COOKIE:";
+					print_r($_COOKIE);
 
-session_start();
+					?></pre>
 
-$_SESSION['username'] = "Antanas";
-
-if(isset($_SESSION["username"])){
-$vardas = $_SESSION['username'];
-} else {
-    $vardas = "nezinomas";
-}
-
-include "templates/login.php";
-
-
-//include "templates/cookies.php";
+				</div>
+			</div>
+	</div>
+</body>
+</html>
