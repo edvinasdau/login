@@ -39,7 +39,8 @@
 					print_r($_SESSION);
 
 					echo "COOKIE:";
-					print_r($_COOKIE);
+					print_r($_COOKIE['username'], "<br/>");
+					echo time();
 
 					?></pre>
 

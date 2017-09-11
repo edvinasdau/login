@@ -1,10 +1,10 @@
 <?php
 
 //$vardas = "";
-$old_user = "";
+//$old_user = "";
 #COOKIES
 
-//setcookie("username", "gigigkltr", time() + (86400 * 30), "/");
+setcookie("username", "Edvinas", time() + 15);
 /*
 if(isset($_COOKIE["username"])){
     $vardas = $_COOKIE["username"];
